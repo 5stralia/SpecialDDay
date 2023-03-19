@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct SpecialDayApp: App {
     let persistenceController = PersistenceController.shared
+    @State var coordinator = Coordinator()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(coordinator)
         }
     }
 }

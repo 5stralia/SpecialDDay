@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SpecialDay
+
+  Created by Hoju Choi on 2023/03/19.
+  
+*/
+
+"일" = "일";
+"제목" = "제목";
+"메모" = "메모";
+"완료" = "완료";
