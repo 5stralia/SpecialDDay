@@ -25,7 +25,34 @@
 		05F1D2F129C73C2B004CE223 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2F029C73C2B004CE223 /* Coordinator.swift */; };
 		05F1D2F429C755C8004CE223 /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2F329C755C8004CE223 /* DetailItemView.swift */; };
 		05F1D2F629C75717004CE223 /* EdittingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2F529C75717004CE223 /* EdittingItemView.swift */; };
+		05F1D31D29CC6BE2004CE223 /* SpecialDayWatch_Watch_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D31C29CC6BE2004CE223 /* SpecialDayWatch_Watch_App.swift */; };
+		05F1D31F29CC6BE2004CE223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D31E29CC6BE2004CE223 /* ContentView.swift */; };
+		05F1D32129CC6BE3004CE223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F1D32029CC6BE3004CE223 /* Assets.xcassets */; };
+		05F1D32429CC6BE3004CE223 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F1D32329CC6BE3004CE223 /* Preview Assets.xcassets */; };
+		05F1D32829CC6C9A004CE223 /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2DD29C6FCD1004CE223 /* ItemEntity.swift */; };
+		05F1D32C29CC6E84004CE223 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D32B29CC6E84004CE223 /* WatchConnectivityManager.swift */; };
+		05F1D32D29CC71EB004CE223 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D32B29CC6E84004CE223 /* WatchConnectivityManager.swift */; };
+		05F1D32F29CC73D8004CE223 /* SpecialDayWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 05F1D31A29CC6BE2004CE223 /* SpecialDayWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		05F1D33429CC7466004CE223 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 05F1D33329CC7466004CE223 /* .swiftlint.yml */; };
+		05F1D33729CC8D6B004CE223 /* TimeIntervale+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2E129C702D8004CE223 /* TimeIntervale+Util.swift */; };
+		05F1D33829CC8D6F004CE223 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2E329C7068A004CE223 /* Date+Util.swift */; };
+		05F1D33929CC9150004CE223 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2EA29C71EF2004CE223 /* Lang.swift */; };
+		05F1D33A29CC918A004CE223 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2DB29C6FAA9004CE223 /* ItemView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05F1D33229CC73D8004CE223 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				05F1D32F29CC73D8004CE223 /* SpecialDayWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05F1D2B929C6F1E0004CE223 /* SpecialDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecialDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,10 +75,24 @@
 		05F1D2F029C73C2B004CE223 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		05F1D2F329C755C8004CE223 /* DetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
 		05F1D2F529C75717004CE223 /* EdittingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdittingItemView.swift; sourceTree = "<group>"; };
+		05F1D31A29CC6BE2004CE223 /* SpecialDayWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpecialDayWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F1D31C29CC6BE2004CE223 /* SpecialDayWatch_Watch_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDayWatch_Watch_App.swift; sourceTree = "<group>"; };
+		05F1D31E29CC6BE2004CE223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05F1D32029CC6BE3004CE223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05F1D32329CC6BE3004CE223 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05F1D32B29CC6E84004CE223 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		05F1D33329CC7466004CE223 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		05F1D2B629C6F1E0004CE223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F1D31729CC6BE2004CE223 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,8 +105,12 @@
 		05F1D2B029C6F1E0004CE223 = {
 			isa = PBXGroup;
 			children = (
+				05F1D33329CC7466004CE223 /* .swiftlint.yml */,
+				05F1D32A29CC6E69004CE223 /* WatchConnectivity */,
 				05F1D2BB29C6F1E0004CE223 /* SpecialDay */,
+				05F1D31B29CC6BE2004CE223 /* SpecialDayWatch Watch App */,
 				05F1D2BA29C6F1E0004CE223 /* Products */,
+				05F1D32E29CC73D8004CE223 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				05F1D2B929C6F1E0004CE223 /* SpecialDay.app */,
+				05F1D31A29CC6BE2004CE223 /* SpecialDayWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +196,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		05F1D31B29CC6BE2004CE223 /* SpecialDayWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				05F1D31C29CC6BE2004CE223 /* SpecialDayWatch_Watch_App.swift */,
+				05F1D31E29CC6BE2004CE223 /* ContentView.swift */,
+				05F1D32029CC6BE3004CE223 /* Assets.xcassets */,
+				05F1D32229CC6BE3004CE223 /* Preview Content */,
+			);
+			path = "SpecialDayWatch Watch App";
+			sourceTree = "<group>";
+		};
+		05F1D32229CC6BE3004CE223 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				05F1D32329CC6BE3004CE223 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05F1D32A29CC6E69004CE223 /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				05F1D32B29CC6E84004CE223 /* WatchConnectivityManager.swift */,
+			);
+			path = WatchConnectivity;
+			sourceTree = "<group>";
+		};
+		05F1D32E29CC73D8004CE223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,6 +241,7 @@
 				05F1D2B629C6F1E0004CE223 /* Frameworks */,
 				05F1D2B729C6F1E0004CE223 /* Resources */,
 				05F1D2CF29C6F311004CE223 /* ShellScript */,
+				05F1D33229CC73D8004CE223 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -169,6 +250,23 @@
 			name = SpecialDay;
 			productName = SpecialDay;
 			productReference = 05F1D2B929C6F1E0004CE223 /* SpecialDay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05F1D31929CC6BE2004CE223 /* SpecialDayWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F1D32729CC6BE3004CE223 /* Build configuration list for PBXNativeTarget "SpecialDayWatch Watch App" */;
+			buildPhases = (
+				05F1D31629CC6BE2004CE223 /* Sources */,
+				05F1D31729CC6BE2004CE223 /* Frameworks */,
+				05F1D31829CC6BE2004CE223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpecialDayWatch Watch App";
+			productName = "SpecialDayWatch Watch App";
+			productReference = 05F1D31A29CC6BE2004CE223 /* SpecialDayWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,6 +280,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					05F1D2B829C6F1E0004CE223 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					05F1D31929CC6BE2004CE223 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -201,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				05F1D2B829C6F1E0004CE223 /* SpecialDay */,
+				05F1D31929CC6BE2004CE223 /* SpecialDayWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -210,9 +312,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F1D33429CC7466004CE223 /* .swiftlint.yml in Resources */,
 				05F1D2C429C6F1E1004CE223 /* Preview Assets.xcassets in Resources */,
 				05F1D2D829C6F9F4004CE223 /* Localizable.strings in Resources */,
 				05F1D2C129C6F1E1004CE223 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F1D31829CC6BE2004CE223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F1D32429CC6BE3004CE223 /* Preview Assets.xcassets in Resources */,
+				05F1D32129CC6BE3004CE223 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,11 +365,27 @@
 				05F1D2C929C6F1E1004CE223 /* SpecialDay.xcdatamodeld in Sources */,
 				05F1D2DE29C6FCD1004CE223 /* ItemEntity.swift in Sources */,
 				05F1D2DC29C6FAA9004CE223 /* ItemView.swift in Sources */,
+				05F1D32C29CC6E84004CE223 /* WatchConnectivityManager.swift in Sources */,
 				05F1D2BD29C6F1E0004CE223 /* SpecialDayApp.swift in Sources */,
 				05F1D2E229C702D8004CE223 /* TimeIntervale+Util.swift in Sources */,
 				05F1D2ED29C720CF004CE223 /* Text+init.swift in Sources */,
 				05F1D2F429C755C8004CE223 /* DetailItemView.swift in Sources */,
 				05F1D2EB29C71EF2004CE223 /* Lang.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05F1D31629CC6BE2004CE223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F1D33929CC9150004CE223 /* Lang.swift in Sources */,
+				05F1D32829CC6C9A004CE223 /* ItemEntity.swift in Sources */,
+				05F1D31F29CC6BE2004CE223 /* ContentView.swift in Sources */,
+				05F1D33A29CC918A004CE223 /* ItemView.swift in Sources */,
+				05F1D32D29CC71EB004CE223 /* WatchConnectivityManager.swift in Sources */,
+				05F1D33829CC8D6F004CE223 /* Date+Util.swift in Sources */,
+				05F1D33729CC8D6B004CE223 /* TimeIntervale+Util.swift in Sources */,
+				05F1D31D29CC6BE2004CE223 /* SpecialDayWatch_Watch_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +461,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -387,6 +516,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -450,6 +580,66 @@
 			};
 			name = Release;
 		};
+		05F1D32529CC6BE3004CE223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpecialDayWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = BG5DA8S34C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SpecialDayWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = hoju.SpecialDay;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hoju.SpecialDay.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		05F1D32629CC6BE3004CE223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpecialDayWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = BG5DA8S34C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SpecialDayWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = hoju.SpecialDay;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hoju.SpecialDay.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +657,15 @@
 			buildConfigurations = (
 				05F1D2CD29C6F1E1004CE223 /* Debug */,
 				05F1D2CE29C6F1E1004CE223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F1D32729CC6BE3004CE223 /* Build configuration list for PBXNativeTarget "SpecialDayWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F1D32529CC6BE3004CE223 /* Debug */,
+				05F1D32629CC6BE3004CE223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

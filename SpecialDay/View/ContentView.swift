@@ -21,9 +21,8 @@ struct ContentView: View {
         NavigationStack(path: $coordinator.path) {
             List {
                 ForEach(items) { item in
-                    let itemEntity = ItemEntity(title: item.title ?? "", days: item.timestamp?.dDays ?? 0)
                     NavigationLink(value: item) {
-                        ItemView(itemEntity)
+                        ItemView(title: item.title ?? "", days: item.timestamp?.dDays ?? 0)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -54,8 +53,23 @@ struct ContentView: View {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+                ToolbarItem {
+                    Button {
+                        let itemEntities = self.items.map {
+                            ItemEntity(title: $0.title, timestamp: $0.timestamp, note: $0.note, createdDate: $0.created_date)
+                        }
+                        WatchConnectivityManager.shared.send(itemEntities)
+                    } label: {
+                        Label("Update Watch App", systemImage: "arrow.clockwise")
+                    }
+                }
             }
-            Text("Select an item")
+//            .onAppear {
+//                let itemEntities = self.items.map {
+//                    ItemEntity(title: $0.title, timestamp: $0.timestamp, note: $0.note, createdDate: $0.created_date)
+//                }
+//                WatchConnectivityManager.shared.send(itemEntities)
+//            }
         }
     }
 

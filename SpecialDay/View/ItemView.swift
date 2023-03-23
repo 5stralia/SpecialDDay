@@ -8,24 +8,43 @@
 import SwiftUI
 
 struct ItemView: View {
-    let entity: ItemEntity
+    let title: String
+    let days: Int
 
-    init(_ entity: ItemEntity) {
-        self.entity = entity
+    init(title: String, days: Int) {
+        self.title = title
+        self.days = days
     }
+    
     var body: some View {
         HStack {
-            Text(entity.title)
+            Text(title)
             Spacer()
-            Text( "\(abs(entity.days)) \(LocalizedStringResource(stringLiteral: "일"))")
-                .foregroundColor(daysColor(entity.days))
+            Text("\(numberSign(days))\(abs(days)) \(LocalizedStringResource(stringLiteral: "일"))")
+                .foregroundColor(daysColor(days))
+        }
+    }
+    
+    private func numberSign(_ number: Int) -> String {
+        if number > 0 {
+            return "+"
+        } else if number == 0 {
+            return ""
+        } else {
+            return "-"
         }
     }
 
     private func daysColor(_ days: Int) -> Color {
         switch days {
         case ..<0: return .red
-        case 0: return Color(uiColor: .label)
+        case 0:
+            #if os(watchOS)
+            return Color(uiColor: .white)
+            #elseif os(iOS)
+            return Color(uiColor: .label)
+            #endif
+            
         default: return .blue
         }
     }
@@ -33,6 +52,6 @@ struct ItemView: View {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemView(ItemEntity(title: "title 10000", days: 23455))
+        ItemView(title: "title 10000", days: 23455)
     }
 }
