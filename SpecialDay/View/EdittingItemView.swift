@@ -31,6 +31,13 @@ struct EdittingItemView: View {
 
         do {
             try viewContext.save()
+            
+            let items = try viewContext.fetch(Item.fetchRequest())
+            let itemEntities = items.map {
+                ItemEntity(id: $0.objectID.uriRepresentation().absoluteString, title: $0.title, timestamp: $0.timestamp, note: $0.note, createdDate: $0.created_date, lastEdited: $0.last_edited)
+            }
+            print(itemEntities)
+            WatchConnectivityManager.shared.send(itemEntities)
         } catch let error {
             print(error)
         }

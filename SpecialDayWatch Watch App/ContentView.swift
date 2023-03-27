@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.created_date, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<Item>
     
     var body: some View {
-        List(connectivityManager.items, id: \.title) { item in
+        List(connectivityManager.items, id: \.id) { item in
             ItemView(title: item.title ?? "", days: item.timestamp?.dDays ?? 0)
         }
     }

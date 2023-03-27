@@ -7,9 +7,12 @@
 
 import Foundation
 
-struct ItemEntity: Codable {
+public struct ItemEntity: Codable {
+    let id: String?
     let title: String?
     let timestamp: Date?
     let note: String?
     let createdDate: Date?
+    let lastEdited: Date?
 }
+

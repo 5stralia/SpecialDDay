@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0566DFEB29D1DAB2009647F2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0566DFEA29D1DAB2009647F2 /* CoreDataManager.swift */; };
 		05F1D2BD29C6F1E0004CE223 /* SpecialDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2BC29C6F1E0004CE223 /* SpecialDayApp.swift */; };
 		05F1D2BF29C6F1E0004CE223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2BE29C6F1E0004CE223 /* ContentView.swift */; };
 		05F1D2C129C6F1E1004CE223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F1D2C029C6F1E1004CE223 /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 		05F1D33829CC8D6F004CE223 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2E329C7068A004CE223 /* Date+Util.swift */; };
 		05F1D33929CC9150004CE223 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2EA29C71EF2004CE223 /* Lang.swift */; };
 		05F1D33A29CC918A004CE223 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2DB29C6FAA9004CE223 /* ItemView.swift */; };
+		05F1D33F29CEAA6C004CE223 /* SpecialDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2C729C6F1E1004CE223 /* SpecialDay.xcdatamodeld */; };
+		05F1D34029CEAA6E004CE223 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2C529C6F1E1004CE223 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0566DFEA29D1DAB2009647F2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		05F1D2B929C6F1E0004CE223 /* SpecialDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecialDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F1D2BC29C6F1E0004CE223 /* SpecialDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDayApp.swift; sourceTree = "<group>"; };
 		05F1D2BE29C6F1E0004CE223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				05F1D2F029C73C2B004CE223 /* Coordinator.swift */,
 				05F1D2C029C6F1E1004CE223 /* Assets.xcassets */,
 				05F1D2C529C6F1E1004CE223 /* Persistence.swift */,
+				0566DFEA29D1DAB2009647F2 /* CoreDataManager.swift */,
 				05F1D2C729C6F1E1004CE223 /* SpecialDay.xcdatamodeld */,
 				05F1D2C229C6F1E1004CE223 /* Preview Content */,
 			);
@@ -359,6 +364,7 @@
 				05F1D2E429C7068A004CE223 /* Date+Util.swift in Sources */,
 				05F1D2F129C73C2B004CE223 /* Coordinator.swift in Sources */,
 				05F1D2E929C71788004CE223 /* AddingItemView.swift in Sources */,
+				0566DFEB29D1DAB2009647F2 /* CoreDataManager.swift in Sources */,
 				05F1D2BF29C6F1E0004CE223 /* ContentView.swift in Sources */,
 				05F1D2E729C712B3004CE223 /* AddingItemEntity.swift in Sources */,
 				05F1D2F629C75717004CE223 /* EdittingItemView.swift in Sources */,
@@ -385,7 +391,9 @@
 				05F1D32D29CC71EB004CE223 /* WatchConnectivityManager.swift in Sources */,
 				05F1D33829CC8D6F004CE223 /* Date+Util.swift in Sources */,
 				05F1D33729CC8D6B004CE223 /* TimeIntervale+Util.swift in Sources */,
+				05F1D33F29CEAA6C004CE223 /* SpecialDay.xcdatamodeld in Sources */,
 				05F1D31D29CC6BE2004CE223 /* SpecialDayWatch_Watch_App.swift in Sources */,
+				05F1D34029CEAA6E004CE223 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

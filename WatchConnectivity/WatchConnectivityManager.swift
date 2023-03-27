@@ -31,6 +31,13 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
             WCSession.default.delegate = self
             WCSession.default.activate()
         }
+        
+        #if os(watchOS)
+        if let data = UserDefaults.standard.object(forKey: MessageKey.items.stringValue) as? Data,
+           let items = try? JSONDecoder().decode([ItemEntity].self, from: data) {
+            self.items = items
+        }
+        #endif
     }
     
     private let key = "items"
@@ -72,6 +79,8 @@ extension WatchConnectivityManager: WCSessionDelegate {
             let items = try JSONDecoder().decode([ItemEntity].self, from: data)
             self.items = items
             print("Received \(items)")
+            
+            UserDefaults.standard.set(data, forKey: MessageKey.items.stringValue)
         } catch let error {
             print("Cannot receive Data: \(String(describing: error))")
         }
