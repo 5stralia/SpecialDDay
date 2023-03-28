@@ -40,7 +40,6 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
         #endif
     }
     
-    private let key = "items"
     func send(_ items: [ItemEntity]) {
         guard WCSession.default.activationState == .activated else { return }
         
@@ -53,9 +52,8 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
         do {
             let data = try JSONEncoder().encode(items)
             try WCSession.default.updateApplicationContext([MessageKey.items.stringValue: data])
-            print("Send \(items)")
         } catch let error {
-            print("Cannot send message: \(String(describing: error))")
+            print(String(describing: error))
         }
     }
 }
@@ -78,7 +76,6 @@ extension WatchConnectivityManager: WCSessionDelegate {
         do {
             let items = try JSONDecoder().decode([ItemEntity].self, from: data)
             self.items = items
-            print("Received \(items)")
             
             UserDefaults.standard.set(data, forKey: MessageKey.items.stringValue)
         } catch let error {

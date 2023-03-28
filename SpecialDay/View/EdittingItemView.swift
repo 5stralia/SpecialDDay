@@ -13,9 +13,9 @@ struct EdittingItemView: View {
     @State private var isShowAlert: Bool = false
 
     @ObservedObject private var addingItem: AddingItemEntity
-    private let item: NSManagedObject
+    private let item: Item
 
-    init(addingItem: AddingItemEntity, item: NSManagedObject) {
+    init(addingItem: AddingItemEntity, item: Item) {
         self.addingItem = addingItem
         self.item = item
     }
@@ -30,14 +30,17 @@ struct EdittingItemView: View {
         item.setValue(addingItem.note, forKey: "note")
 
         do {
-            try viewContext.save()
-            
-            let items = try viewContext.fetch(Item.fetchRequest())
-            let itemEntities = items.map {
-                ItemEntity(id: $0.objectID.uriRepresentation().absoluteString, title: $0.title, timestamp: $0.timestamp, note: $0.note, createdDate: $0.created_date, lastEdited: $0.last_edited)
-            }
-            print(itemEntities)
-            WatchConnectivityManager.shared.send(itemEntities)
+            try CoreDataManager.shared.update(
+                item,
+                to: ItemEntity(
+                    id: nil,
+                    title: addingItem.title,
+                    timestamp: addingItem.timestamp,
+                    note: addingItem.note,
+                    createdDate: addingItem.createdTimestamp,
+                    lastEdited: Date()
+                )
+            )
         } catch let error {
             print(error)
         }
@@ -48,7 +51,7 @@ struct EdittingItemView_Previews: PreviewProvider {
     static var previews: some View {
         EdittingItemView(
             addingItem: AddingItemEntity(),
-            item: NSManagedObject(context: PersistenceController.preview.container.viewContext)
+            item: Item.init(context: PersistenceController.preview.container.viewContext)
         )
     }
 }

@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 final public class CoreDataManager {
-    public let shared = CoreDataManager()
+    public static let shared = CoreDataManager()
     
     private let persistenceController: PersistenceController
     private let viewContext: NSManagedObjectContext
@@ -34,8 +34,11 @@ final public class CoreDataManager {
         try self.updateStoredItems()
     }
     
-    public func delete(_ items: [Item]) {
+    public func delete(_ items: [Item]) throws {
         items.forEach(viewContext.delete)
+        
+        try viewContext.save()
+        try self.updateStoredItems()
     }
     
     public func update(_ item: Item, to: ItemEntity) throws {

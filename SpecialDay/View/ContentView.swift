@@ -59,13 +59,18 @@ struct ContentView: View {
 
     private func updateItem(_ offset: Int, value: AddingItemEntity) {
         withAnimation {
-            let item = items[offset]
-            item.setValue(value.title, forKey: "title")
-            item.setValue(value.timestamp, forKey: "timestamp")
-            item.setValue(value.note, forKey: "note")
-
             do {
-                try viewContext.save()
+                try CoreDataManager.shared.update(
+                    items[offset],
+                    to: ItemEntity(
+                        id: nil,
+                        title: value.title,
+                        timestamp: value.timestamp,
+                        note: value.note,
+                        createdDate: value.createdTimestamp,
+                        lastEdited: Date()
+                    )
+                )
             } catch let error {
                 print(error)
             }
@@ -74,11 +79,9 @@ struct ContentView: View {
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
             do {
-                try viewContext.save()
-            } catch {
+                try CoreDataManager.shared.delete(offsets.map { items[$0] })
+            } catch let error {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate.
                 // You should not use this function in a shipping application,

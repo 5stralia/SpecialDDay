@@ -24,21 +24,17 @@ struct AddingItemView: View {
 
     private func doneAction() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.title = addingItem.title
-            newItem.timestamp = addingItem.timestamp
-            newItem.note = addingItem.note
-            newItem.created_date = addingItem.createdTimestamp
-
             do {
-                try viewContext.save()
-                
-                let items = try viewContext.fetch(Item.fetchRequest())
-                let itemEntities = items.map {
-                    ItemEntity(id: $0.objectID.uriRepresentation().absoluteString, title: $0.title, timestamp: $0.timestamp, note: $0.note, createdDate: $0.created_date, lastEdited: $0.last_edited)
-                }
-                print(itemEntities)
-                WatchConnectivityManager.shared.send(itemEntities)
+                try CoreDataManager.shared.add(
+                    ItemEntity(
+                        id: nil,
+                        title: addingItem.title,
+                        timestamp: addingItem.timestamp,
+                        note: addingItem.note,
+                        createdDate: addingItem.createdTimestamp,
+                        lastEdited: Date()
+                    )
+                )
             } catch {
                 isShowAlert = true
             }
