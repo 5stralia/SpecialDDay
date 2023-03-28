@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0566DFEB29D1DAB2009647F2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0566DFEA29D1DAB2009647F2 /* CoreDataManager.swift */; };
+		0566DFF429D3193F009647F2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0566DFF329D3193F009647F2 /* WidgetKit.framework */; };
+		0566DFF629D3193F009647F2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0566DFF529D3193F009647F2 /* SwiftUI.framework */; };
+		0566DFF929D3193F009647F2 /* SpecialDay_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0566DFF829D3193F009647F2 /* SpecialDay_Widget.swift */; };
+		0566DFFB29D3193F009647F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0566DFFA29D3193F009647F2 /* Assets.xcassets */; };
+		0566DFFF29D3193F009647F2 /* SpecialDay WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0566DFF229D3193F009647F2 /* SpecialDay WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		05F1D2BD29C6F1E0004CE223 /* SpecialDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2BC29C6F1E0004CE223 /* SpecialDayApp.swift */; };
 		05F1D2BF29C6F1E0004CE223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2BE29C6F1E0004CE223 /* ContentView.swift */; };
 		05F1D2C129C6F1E1004CE223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F1D2C029C6F1E1004CE223 /* Assets.xcassets */; };
@@ -43,7 +48,28 @@
 		05F1D34029CEAA6E004CE223 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1D2C529C6F1E1004CE223 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0566DFFD29D3193F009647F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05F1D2B129C6F1E0004CE223 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0566DFF129D3193F009647F2;
+			remoteInfo = "SpecialDay WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		0566E00329D3193F009647F2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0566DFFF29D3193F009647F2 /* SpecialDay WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F1D33229CC73D8004CE223 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +85,12 @@
 
 /* Begin PBXFileReference section */
 		0566DFEA29D1DAB2009647F2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0566DFF229D3193F009647F2 /* SpecialDay WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpecialDay WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0566DFF329D3193F009647F2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0566DFF529D3193F009647F2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0566DFF829D3193F009647F2 /* SpecialDay_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDay_Widget.swift; sourceTree = "<group>"; };
+		0566DFFA29D3193F009647F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0566DFFC29D3193F009647F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05F1D2B929C6F1E0004CE223 /* SpecialDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecialDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F1D2BC29C6F1E0004CE223 /* SpecialDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDayApp.swift; sourceTree = "<group>"; };
 		05F1D2BE29C6F1E0004CE223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +121,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0566DFEF29D3193F009647F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0566DFF629D3193F009647F2 /* SwiftUI.framework in Frameworks */,
+				0566DFF429D3193F009647F2 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F1D2B629C6F1E0004CE223 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +147,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0566DFF729D3193F009647F2 /* SpecialDay Widget */ = {
+			isa = PBXGroup;
+			children = (
+				0566DFF829D3193F009647F2 /* SpecialDay_Widget.swift */,
+				0566DFFA29D3193F009647F2 /* Assets.xcassets */,
+				0566DFFC29D3193F009647F2 /* Info.plist */,
+			);
+			path = "SpecialDay Widget";
+			sourceTree = "<group>";
+		};
 		05F1D2B029C6F1E0004CE223 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +164,7 @@
 				05F1D32A29CC6E69004CE223 /* WatchConnectivity */,
 				05F1D2BB29C6F1E0004CE223 /* SpecialDay */,
 				05F1D31B29CC6BE2004CE223 /* SpecialDayWatch Watch App */,
+				0566DFF729D3193F009647F2 /* SpecialDay Widget */,
 				05F1D2BA29C6F1E0004CE223 /* Products */,
 				05F1D32E29CC73D8004CE223 /* Frameworks */,
 			);
@@ -123,6 +175,7 @@
 			children = (
 				05F1D2B929C6F1E0004CE223 /* SpecialDay.app */,
 				05F1D31A29CC6BE2004CE223 /* SpecialDayWatch Watch App.app */,
+				0566DFF229D3193F009647F2 /* SpecialDay WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,6 +284,8 @@
 		05F1D32E29CC73D8004CE223 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0566DFF329D3193F009647F2 /* WidgetKit.framework */,
+				0566DFF529D3193F009647F2 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,6 +293,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0566DFF129D3193F009647F2 /* SpecialDay WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0566E00029D3193F009647F2 /* Build configuration list for PBXNativeTarget "SpecialDay WidgetExtension" */;
+			buildPhases = (
+				0566DFEE29D3193F009647F2 /* Sources */,
+				0566DFEF29D3193F009647F2 /* Frameworks */,
+				0566DFF029D3193F009647F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpecialDay WidgetExtension";
+			productName = "SpecialDay WidgetExtension";
+			productReference = 0566DFF229D3193F009647F2 /* SpecialDay WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		05F1D2B829C6F1E0004CE223 /* SpecialDay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05F1D2CC29C6F1E1004CE223 /* Build configuration list for PBXNativeTarget "SpecialDay" */;
@@ -264,10 +336,12 @@
 				05F1D31629CC6BE2004CE223 /* Sources */,
 				05F1D31729CC6BE2004CE223 /* Frameworks */,
 				05F1D31829CC6BE2004CE223 /* Resources */,
+				0566E00329D3193F009647F2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0566DFFE29D3193F009647F2 /* PBXTargetDependency */,
 			);
 			name = "SpecialDayWatch Watch App";
 			productName = "SpecialDayWatch Watch App";
@@ -284,6 +358,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					0566DFF129D3193F009647F2 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					05F1D2B829C6F1E0004CE223 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -308,11 +385,20 @@
 			targets = (
 				05F1D2B829C6F1E0004CE223 /* SpecialDay */,
 				05F1D31929CC6BE2004CE223 /* SpecialDayWatch Watch App */,
+				0566DFF129D3193F009647F2 /* SpecialDay WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0566DFF029D3193F009647F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0566DFFB29D3193F009647F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F1D2B729C6F1E0004CE223 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +442,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0566DFEE29D3193F009647F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0566DFF929D3193F009647F2 /* SpecialDay_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F1D2B529C6F1E0004CE223 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,6 +493,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0566DFFE29D3193F009647F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0566DFF129D3193F009647F2 /* SpecialDay WidgetExtension */;
+			targetProxy = 0566DFFD29D3193F009647F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		05F1D2DA29C6F9F4004CE223 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -412,6 +514,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0566E00129D3193F009647F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BG5DA8S34C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpecialDay Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SpecialDay Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hoju.SpecialDay.watchkitapp.SpecialDay-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		0566E00229D3193F009647F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BG5DA8S34C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpecialDay Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SpecialDay Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hoju.SpecialDay.watchkitapp.SpecialDay-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		05F1D2CA29C6F1E1004CE223 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -591,6 +753,7 @@
 		05F1D32529CC6BE3004CE223 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -621,6 +784,7 @@
 		05F1D32629CC6BE3004CE223 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -651,6 +815,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0566E00029D3193F009647F2 /* Build configuration list for PBXNativeTarget "SpecialDay WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0566E00129D3193F009647F2 /* Debug */,
+				0566E00229D3193F009647F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05F1D2B429C6F1E0004CE223 /* Build configuration list for PBXProject "SpecialDay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
