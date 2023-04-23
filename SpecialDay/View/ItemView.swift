@@ -15,7 +15,7 @@ struct ItemView: View {
         self.title = title
         self.days = days
     }
-    
+
     var body: some View {
         HStack {
             Text(title)
@@ -24,7 +24,7 @@ struct ItemView: View {
                 .foregroundColor(daysColor(days))
         }
     }
-    
+
     private func numberSign(_ number: Int) -> String {
         if number > 0 {
             return "+"
@@ -44,7 +44,7 @@ struct ItemView: View {
             #elseif os(iOS)
             return Color(uiColor: .label)
             #endif
-            
+
         default: return .blue
         }
     }

@@ -15,4 +15,3 @@ public struct ItemEntity: Codable {
     let createdDate: Date?
     let lastEdited: Date?
 }
-

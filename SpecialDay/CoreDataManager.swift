@@ -10,10 +10,10 @@ import Foundation
 
 final public class CoreDataManager {
     public static let shared = CoreDataManager()
-    
+
     private let persistenceController: PersistenceController
     private let viewContext: NSManagedObjectContext
-    
+
     private init(
         persistenceController: PersistenceController = PersistenceController.shared,
         viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext
@@ -21,7 +21,7 @@ final public class CoreDataManager {
         self.persistenceController = persistenceController
         self.viewContext = viewContext
     }
-    
+
     public func add(_ item: ItemEntity) throws {
         let newItem = Item(context: viewContext)
         newItem.title = item.title
@@ -33,24 +33,24 @@ final public class CoreDataManager {
         try viewContext.save()
         try self.updateStoredItems()
     }
-    
+
     public func delete(_ items: [Item]) throws {
         items.forEach(viewContext.delete)
-        
+
         try viewContext.save()
         try self.updateStoredItems()
     }
-    
+
     public func update(_ item: Item, to: ItemEntity) throws {
         item.title = to.title
         item.timestamp = to.timestamp
         item.note = to.note
         item.last_edited = to.lastEdited
-        
+
         try viewContext.save()
         try self.updateStoredItems()
     }
-    
+
     private func updateStoredItems() throws {
         let items = try viewContext.fetch(Item.fetchRequest())
         let itemEntities = items.map {
@@ -65,5 +65,5 @@ final public class CoreDataManager {
         }
         WatchConnectivityManager.shared.send(itemEntities)
     }
-    
+
 }

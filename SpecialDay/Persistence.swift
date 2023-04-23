@@ -69,21 +69,73 @@ struct PersistenceController {
 struct TestData {
     let items: [TextItemData]
 
+    // swiftlint:disable function_body_length
     init() {
         let now = Date()
         self.items = [
-            TextItemData(title: "title 1", timestamp: Date(timeInterval: -100 * .aDaySeconds, since: now), note: "note 1", createdDate: Date()),
-            TextItemData(title: "title 2", timestamp: Date(timeInterval: -90 * .aDaySeconds, since: now), note: "note 2", createdDate: Date()),
-            TextItemData(title: "title 3", timestamp: Date(timeInterval: -45 * .aDaySeconds, since: now), note: "note 3", createdDate: Date()),
-            TextItemData(title: "title 4", timestamp: Date(timeInterval: 0 * .aDaySeconds, since: now), note: "note 4", createdDate: Date()),
-            TextItemData(title: "title 5", timestamp: Date(timeInterval: 55 * .aDaySeconds, since: now), note: "note 5", createdDate: Date()),
-            TextItemData(title: "title 6", timestamp: Date(timeInterval: 100 * .aDaySeconds, since: now), note: "note 6", createdDate: Date()),
-            TextItemData(title: "title 7", timestamp: Date(timeInterval: 1027 * .aDaySeconds, since: now), note: "note 7", createdDate: Date()),
-            TextItemData(title: "title 8", timestamp: Date(timeInterval: 59348 * .aDaySeconds, since: now), note: "note 8", createdDate: Date()),
-            TextItemData(title: "title 9", timestamp: Date(timeInterval: -23940 * .aDaySeconds, since: now), note: "note 9", createdDate: Date()),
-            TextItemData(title: "title 10", timestamp: Date(timeInterval: 0 * .aDaySeconds, since: now), note: "note 10", createdDate: Date())
+            TextItemData(
+                title: "title 1",
+                timestamp: Date(timeInterval: -100 * .aDaySeconds, since: now),
+                note: "note 1",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 2",
+                timestamp: Date(timeInterval: -90 * .aDaySeconds, since: now),
+                note: "note 2",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 3",
+                timestamp: Date(timeInterval: -45 * .aDaySeconds, since: now),
+                note: "note 3",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 4",
+                timestamp: Date(timeInterval: 0 * .aDaySeconds, since: now),
+                note: "note 4",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 5",
+                timestamp: Date(timeInterval: 55 * .aDaySeconds, since: now),
+                note: "note 5",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 6",
+                timestamp: Date(timeInterval: 100 * .aDaySeconds, since: now),
+                note: "note 6",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 7",
+                timestamp: Date(timeInterval: 1027 * .aDaySeconds, since: now),
+                note: "note 7",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 8",
+                timestamp: Date(timeInterval: 59348 * .aDaySeconds, since: now),
+                note: "note 8",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 9",
+                timestamp: Date(timeInterval: -23940 * .aDaySeconds, since: now),
+                note: "note 9",
+                createdDate: Date()
+            ),
+            TextItemData(
+                title: "title 10",
+                timestamp: Date(timeInterval: 0 * .aDaySeconds, since: now),
+                note: "note 10",
+                createdDate: Date()
+            )
         ]
     }
+    // swiftlint:enable function_body_length
 }
 
 struct TextItemData {

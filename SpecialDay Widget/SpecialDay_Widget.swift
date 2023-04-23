@@ -18,21 +18,21 @@ struct Provider: TimelineProvider {
         SimpleEntry(date: Date(), title: "DDay", days: 100)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         if context.isPreview {
             let entry = SimpleEntry(
                 date: Date(),
                 title: "DDay",
                 days: 100
             )
-            
+
             completion(entry)
             return
         }
-        
+
         Task {
             let date = Date()
-            
+
             if let data = UserDefaults.standard.object(forKey: "widget_item") as? Data,
                let item = try? JSONDecoder().decode(WidgetItem.self, from: data) {
                 let entry = SimpleEntry(date: date, title: item.title, days: item.days)
@@ -44,9 +44,9 @@ struct Provider: TimelineProvider {
         }
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         var entries: [SimpleEntry] = []
-        
+
         guard let data = UserDefaults.standard.object(forKey: "widget_item") as? Data,
               let item = try? JSONDecoder().decode(WidgetItem.self, from: data)
         else {
@@ -73,7 +73,7 @@ struct SimpleEntry: TimelineEntry {
     let days: Int
 }
 
-struct SpecialDay_WidgetEntryView : View {
+struct SpecialDay_WidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
