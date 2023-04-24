@@ -16,13 +16,15 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.created_date, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @State private var isWidget: Bool = false
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             List {
                 ForEach(items, id: \.id) { item in
                     NavigationLink(value: item) {
-                        ItemView(title: item.title ?? "", days: item.timestamp?.dDays ?? 0)
+                        ItemView(title: item.title ?? "", days: item.timestamp?.dDays ?? 0, isWidget: $isWidget)
                     }
                 }
                 .onDelete(perform: deleteItems)
